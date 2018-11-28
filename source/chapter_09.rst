@@ -45,7 +45,7 @@ auto脚本
 
 auto脚本由一系列脚本组成，他们有一些是实现一些通用功能由其它脚本来调用（如have），有一些则是完成一些特定的功能（如option）。脚本之间的主要执行顺序及调用关系如下图所示（由上到下，表示主流程的执行）：
 
-.. image:: http://tengine.taobao.org/book/_images/chapter-9-1.jpg
+.. image:: https://github.com/taobao/nginx-book/blob/master/source/images/chapter-9-1.jpg
 
 接下来，我们结合代码来分析下configure的原理:
 
@@ -59,7 +59,7 @@ auto脚本由一系列脚本组成，他们有一些是实现一些通用功能�
 
 这是configure源码开始执行的前三行，依次交由auto目录下面的option、init、sources来处理。
 
-2) auto/options主是处理用户输入的configure选项，以及输出帮助信息等。读者可以结合nginx的源码来阅读本章内容。由于篇幅关系，这里大致列出此文件的结构：
+2) auto/options主要是处理用户输入的configure选项，以及输出帮助信息等。读者可以结合nginx的源码来阅读本章内容。由于篇幅关系，这里大致列出此文件的结构：
 
 .. code:: c
 
@@ -149,7 +149,7 @@ auto脚本由一系列脚本组成，他们有一些是实现一些通用功能�
 
 3) auto/init
 
-该文件的目录在于初始化一些临时文件的路径，检查echo的兼容性，并创建Makefile。
+该文件的目的在于初始化一些临时文件的路径，检查echo的兼容性，并创建Makefile。
 
 .. code:: c
 
@@ -387,7 +387,7 @@ nginx的configure会自动检测不同平台的特性，神奇之处就是auto/f
 
     #ngx_found 如果找到，并测试成功，其值为yes，否则其值为no
 
-看看ngx_feature的关键代码：
+看看auto/feature的关键代码：
 
 .. code:: c
 
